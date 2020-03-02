@@ -1,6 +1,6 @@
 # Mixture
 
-**TODO: Add description**
+Mixture - is a yet another cli for Jira issue tracker
 
 ## Installation
 
