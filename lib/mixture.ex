@@ -1,17 +1,13 @@
 defmodule Mixture do
-  @moduledoc """
-  Documentation for `Mixture`.
-  """
+  use Application
+  require Logger
 
-  @doc """
-  Hello world.
+  def start(_type, _args) do
+    Logger.info("Hello world")
+    children = []
+    Supervisor.start_link(children, strategy: :one_for_one)
+  end
 
-  ## Examples
-
-      iex> Mixture.hello()
-      :world
-
-  """
   def hello do
     :world
   end
