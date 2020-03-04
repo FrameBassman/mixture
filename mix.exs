@@ -8,7 +8,10 @@ defmodule Mixture.MixProject do
       elixir: "~> 1.7",
       start_permanent: Mix.env() == :prod,
       deps: deps(),
-      escript: [main_module: Mixture],
+      escript: [
+        main_module: Mixture,
+        path: "./_build/bin/mixture"
+      ],
       preferred_cli_env: [
         "coveralls": :test,
         "coveralls.html": :test,
