@@ -1,11 +1,11 @@
 defmodule Mixture do
-  use Application
   require Logger
 
-  def start(_type, _args) do
+  def main(args) do
     Logger.info("Hello world")
-    children = []
-    Supervisor.start_link(children, strategy: :one_for_one)
+    options = [switches: [file: :string],aliases: [f: :file]]
+    {opts,_,_}= OptionParser.parse(args, options)
+    IO.inspect opts, label: "Command Line Arguments"
   end
 
   def hello do
