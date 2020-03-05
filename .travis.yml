@@ -1,7 +1,14 @@
 language: elixir
-elixir: '1.10.2'
 os: linux
 dist: trusty
+
+before_script:
+  - |
+  wget https://packages.erlang-solutions.com/erlang-solutions_2.0_all.deb && sudo dpkg -i erlang-solutions_2.0_all.deb
+  apt-get update
+  apt-get install esl-erlang
+  apt-get install elixir
+
 
 script:
   - MIX_ENV=test mix do test
