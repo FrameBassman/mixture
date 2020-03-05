@@ -3,7 +3,7 @@ version: 2.1
 jobs:
   test:
     docker:
-      - image: elixir:1.10.1-slim
+      - image: elixir:1.10.1-alpine
     steps:
       - checkout
       - run:
@@ -15,12 +15,13 @@ jobs:
             MIX_ENV=test mix do test
   coveralls:
     docker:
-      - image: elixir:1.10.1-slim
+      - image: elixir:1.10.1-apline
     steps:
       - checkout
       - run:
           name: run coverage
           command: |
+            apk add curl
             mix local.hex --force
             mix local.rebar --force
             mix deps.get
