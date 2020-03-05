@@ -3,7 +3,7 @@ version: 2.1
 jobs:
   test:
     docker:
-      - image: elixir:1.10.1-alpine
+      - image: elixir:1.10.1-slim
     steps:
       - checkout
       - run:
