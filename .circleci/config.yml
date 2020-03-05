@@ -10,6 +10,7 @@ jobs:
           name: run unit tests
           command: |
             mix local.hex --force
+            mix local.rebar --force
             mix deps.get
             MIX_ENV=test mix do test
   coveralls:
@@ -21,6 +22,7 @@ jobs:
           name: run coverage
           command: |
             mix local.hex --force
+            mix local.rebar --force
             mix deps.get
             MIX_ENV=test mix do compile --warnings-as-errors, coveralls.json
       - run:
