@@ -27,3 +27,4 @@ workflows:
     jobs:
       - test
       - coveralls
+
