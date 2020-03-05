@@ -3,6 +3,6 @@ defmodule MixtureTest do
   doctest Mixture
 
   test "greets the world" do
-    assert Mixture.start(:t, :s) != nil
+    assert Mixture.main(:t, :s) != nil
   end
 end
