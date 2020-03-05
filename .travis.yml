@@ -1,4 +1,4 @@
-language: elixir
+language: bash
 os: linux
 dist: trusty
 
