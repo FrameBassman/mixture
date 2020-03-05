@@ -7,6 +7,9 @@ jobs:
     steps:
       - checkout
       - run:
+          name: install deps
+          command: mix local.hex --force
+      - run:
           name: run unit tests
           command: MIX_ENV=test mix do test
   coveralls:
@@ -15,7 +18,10 @@ jobs:
     steps:
       - checkout
       - run:
-          name: run unit tests
+          name: install deps
+          command: mix local.hex --force
+      - run:
+          name: run coverage
           command: MIX_ENV=test mix do compile --warnings-as-errors, coveralls.json
       - run:
           name: send coverage report
@@ -27,4 +33,3 @@ workflows:
     jobs:
       - test
       - coveralls
-
