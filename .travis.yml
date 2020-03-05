@@ -6,6 +6,7 @@ before_script:
   - wget https://packages.erlang-solutions.com/erlang-solutions_2.0_all.deb && sudo dpkg -i erlang-solutions_2.0_all.deb
   - sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 6B05F25D762E3157
   - sudo apt-get update
+  - sudo apt install emacs
   - sudo apt-get install esl-erlang
   - sudo apt-get install elixir
 
