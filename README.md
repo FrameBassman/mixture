@@ -1,6 +1,6 @@
 # Mixture
 
-[![travisci](https://api.travis-ci.com/FrameBassman/mixture.svg?branch=master)](https://travis-ci.com/FrameBassman/mixture)
+[![CircleCI](https://circleci.com/gh/FrameBassman/mixture/tree/master.svg?style=shield)](https://circleci.com/gh/FrameBassman/mixture/tree/master)
 [![codecov](https://codecov.io/gh/FrameBassman/mixture/branch/master/graph/badge.svg)](https://codecov.io/gh/FrameBassman/mixture)
 
 Mixture - is a yet another cli for Jira issue tracker
