@@ -13,6 +13,14 @@ jobs:
             mix local.rebar --force
             mix deps.get
             MIX_ENV=test mix do test
+      - run:
+          name: install ca certificates for publishing test report
+          command: |
+            apt-get update
+            apt-get install -y ca-certificates
+          when: always
+      - store_test_results:
+          path: ./_build
   coveralls:
     docker:
       - image: elixir:1.10.1-slim
