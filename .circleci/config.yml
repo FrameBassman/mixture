@@ -13,6 +13,10 @@ jobs:
             mix local.rebar --force
             mix deps.get
             MIX_ENV=test mix do test
+      - run:
+          name: install ca certificates for publishing test report
+          command: apt-get install ca-certificates
+          when: always
       - store_test_results:
           path: ./_build/mixture-junit_report.xml
   coveralls:
