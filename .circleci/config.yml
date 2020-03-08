@@ -20,7 +20,7 @@ jobs:
             apt-get install -y ca-certificates
           when: always
       - store_test_results:
-          path: ./_build/mixture-junit_report.xml
+          path: ./_build
   coveralls:
     docker:
       - image: elixir:1.10.1-slim
