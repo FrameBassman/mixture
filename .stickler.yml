@@ -2,7 +2,6 @@
 linters:
     credo:
         ignore-checks: duplicated
-        all-priorities:
 
 files:
     ignore:
