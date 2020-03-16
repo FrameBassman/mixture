@@ -5,7 +5,7 @@ services:
   - docker
 
 script:
-  - wget -O- http://travis.debian.net/script.sh | sh -
+  - sh deploy/debianization.sh
 
 if:
   tag IS blank
