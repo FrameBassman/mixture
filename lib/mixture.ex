@@ -13,6 +13,11 @@ defmodule Mixture do
     {:ok, self()}
   end
 
+  def start(:normal, []) do
+    IO.puts("TODO")
+    {:ok, self()}
+  end
+
   def get_worklog(task) do
     jira_domain = System.get_env("JIRA_DOMAIN") || raise("no env variable JIRA_DOMAIN provided")
     jira_login = System.get_env("JIRA_LOGIN") || raise("no env variable JIRA_LOGIN provided")
@@ -29,8 +34,6 @@ defmodule Mixture do
     short_worklogs = Enum.map(decoded_resp["worklogs"], fn(worklog) -> {worklog["created"], worklog["timeSpent"], worklog["author"]["displayName"], worklog["author"]["emailAddress"]} end)
 
     IO.puts(JSON.encode!(short_worklogs))
-
-    {:ok, self()}
   end
 
   def hello do
