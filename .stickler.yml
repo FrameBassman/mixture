@@ -1,0 +1,14 @@
+---
+linters:
+    credo:
+        ignore-checks: duplicated
+
+files:
+    ignore:
+        - '_build/*'
+        - '.circleci/*'
+        - 'cover/*'
+        - 'deps/*'
+        - '.gitignore'
+        - 'Makefile'
+        - 'README.md'

@@ -36,6 +36,7 @@ defmodule Mixture.MixProject do
       {:excoveralls, "~> 0.5.7", only: :test},
       {:junit_formatter, "~> 3.0", only: :test},
       {:json, "~> 1.2"},
+      {:credo, "~> 1.2", only: [:dev, :test], runtime: false},
     ]
   end
 end
