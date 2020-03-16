@@ -13,7 +13,7 @@ defmodule Mixture.MixProject do
         path: "./_build/bin/mixture"
       ],
       preferred_cli_env: [
-        "coveralls": :test,
+        coveralls: :test,
         "coveralls.html": :test,
         "coveralls.json": :test,
       ],
