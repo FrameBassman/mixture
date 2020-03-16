@@ -10,7 +10,6 @@ defmodule Mixture do
     options = [switches: [file: :string],aliases: [f: :file]]
     {opts,_,_}= OptionParser.parse(args, options)
     IO.inspect opts, label: "Command Line Arguments"
-    {:ok, self()}
   end
 
   def start(:normal, []) do
