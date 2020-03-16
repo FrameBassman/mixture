@@ -5,6 +5,14 @@ defmodule Mixture do
   require JSON
   require Enum
 
+  def main(args) do
+    Logger.info("Hello world")
+    options = [switches: [file: :string],aliases: [f: :file]]
+    {opts,_,_}= OptionParser.parse(args, options)
+    IO.inspect opts, label: "Command Line Arguments"
+    {:ok, self()}
+  end
+
   def get_worklog(task) do
     jira_domain = System.get_env("JIRA_DOMAIN") || raise("no env variable JIRA_DOMAIN provided")
     jira_login = System.get_env("JIRA_LOGIN") || raise("no env variable JIRA_LOGIN provided")
