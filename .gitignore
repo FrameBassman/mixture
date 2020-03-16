@@ -1,4 +1,9 @@
+# IDEs
 .idea/
+*.iml
+
+# configs
+set-env.sh
 
 # The directory Mix will write compiled artifacts to.
 /_build/
