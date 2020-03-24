@@ -1,0 +1,4 @@
+#!/bin/bash
+export JIRA_DOMAIN="https://organization.atlassian.net" ;\
+export JIRA_LOGIN="user@organization.com" ;\
+export JIRA_API_TOKEN="=xxxYOURSUPERPRIVATETOKENxxx="

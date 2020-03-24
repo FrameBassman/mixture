@@ -5,20 +5,16 @@
 
 Mixture - is a yet another cli for Jira issue tracker
 
-## Installation
+## Prerequisites
+- Erlang/OTP 22 (TODO, not yet tested on previous versions)
+- Elixir v1.10.*  (TODO, not yet tested on previous versions)
+- Linux OS (TODO, not yet tested on OS X and Windows)
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `mixture` to your list of dependencies in `mix.exs`:
+## Setup
+- `make setup`
+- fill opened set-env.sh with your parameters (# you can get your jira token here https://id.atlassian.com/manage/api-tokens)
 
-```elixir
-def deps do
-  [
-    {:mixture, "~> 0.1.0"}
-  ]
-end
-```
-
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at [https://hexdocs.pm/mixture](https://hexdocs.pm/mixture).
-
+## Usage
+- `source set-env.sh`
+- `iex -S mix`
+- `Mixture.get_worklog(<task_number, e.g. "TASK-152">)`

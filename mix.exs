@@ -13,7 +13,7 @@ defmodule Mixture.MixProject do
         path: "./_build/bin/mixture"
       ],
       preferred_cli_env: [
-        "coveralls": :test,
+        coveralls: :test,
         "coveralls.html": :test,
         "coveralls.json": :test,
       ],
@@ -24,7 +24,7 @@ defmodule Mixture.MixProject do
   # Run "mix help compile.app" to learn about applications.
   def application do
     [
-      extra_applications: [:logger]
+      extra_applications: [:logger, :ssl]
     ]
   end
 
@@ -34,8 +34,9 @@ defmodule Mixture.MixProject do
       # {:dep_from_hexpm, "~> 0.3.0"},
       # {:dep_from_git, git: "https://github.com/elixir-lang/my_dep.git", tag: "0.1.0"},
       {:excoveralls, "~> 0.5.7", only: :test},
-      {:junit_formatter, "~> 3.0", only: :test},
+      {:junit_formatter, "~> 3.0", only: [:test]},
       {:credo, "~> 1.2", only: [:dev, :test], runtime: false},
+      {:json, "~> 1.2"},
     ]
   end
 end
